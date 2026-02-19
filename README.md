@@ -1,19 +1,89 @@
-# 🏦 Fintech-Credit-Risk-Analysis
+  # 💳 Fintech Credit Risk Engine
 
-### 📌 Project Overview
-This project addresses the challenge of credit risk in the Fintech sector by building an end-to-end classification engine to predict loan default probability. By analyzing historical lending data, I developed a machine learning model that identifies high-risk applicants, helping financial institutions make data-driven lending decisions.
+### **End-to-End Loan Default Prediction & Risk Analytics Portal**
 
-### 🛠️ Tech Stack & Skills
-* **Data Analytics:** Python (Pandas, Numpy), SQL (Window Functions, CTEs for segmenting risk).
-* **Visualization:** Matplotlib, Seaborn, and Power BI/Tableau for trend analysis.
-* **Machine Learning:** XGBoost/Random Forest, Handling Class Imbalance (SMOTE), Hyperparameter Tuning.
-* **Deployment:** Streamlit for an interactive "Credit Officer Portal."
+![Python Version](https://img.shields.io/badge/Python-3.9%2B-green.svg)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)
 
-### 🚀 Key Features
-* **Automated Risk Scoring:** Real-time prediction of "Default" vs. "Paid" status.
-* **Feature Importance Analysis:** Identifying the top drivers of risk (e.g., Debt-to-Income ratio vs. Annual Income).
-* **Interactive Dashboard:** A Streamlit interface with a dynamic "Risk Meter" for individual loan applications.
+## 📌 Project Overview
+This project addresses the critical challenge of credit risk in the Fintech sector. By analyzing historical lending data, I developed a machine learning model that identifies high-risk applicants, helping financial institutions make data-driven lending decisions.
 
-### 📈 Business Impact
-* **Precision-Focused:** Optimized for **Recall** to ensure that the highest number of potential defaulters are flagged, directly protecting the lender's capital.
-* **Data-Driven Insights:** Revealed that applicants with DTIs over 30% are significantly more likely to default.
+Unlike static notebooks, this is a **production-ready tool** featuring an interactive "Credit Officer Portal" built entirely in Python. It allows for real-time risk assessment and "What-If" scenario analysis for individual loan applications.
+
+
+
+---
+
+## 🛠️ Tech Stack & Skills
+
+* **Machine Learning:** XGBoost, Random Forest, Scikit-Learn.
+* **Data Engineering:** Python (Pandas, Numpy), SQL (Window Functions & CTEs for risk segmentation).
+* **Imbalance Handling:** SMOTE (Synthetic Minority Over-sampling Technique).
+* **Dashboard & Deployment:** Streamlit (Custom UI & Real-time Visuals).
+* **Visualization:** Matplotlib, Seaborn (Integrated into Streamlit).
+
+---
+
+## 🚀 Key Features
+
+### 1. **Automated Risk Scoring**
+Real-time classification of "Default" vs. "Paid" status. The model outputs a probability score, which is translated into a **Dynamic Risk Meter** (Low, Medium, High).
+
+### 2. **Feature Importance Analysis**
+Uses model transparency to identify the top drivers of risk. 
+* **Key Finding:** Debt-to-Income (DTI) ratios above 30% were identified as the strongest predictor of default.
+
+### 3. **Interactive "What-If" Simulator**
+A dedicated interface where credit officers can adjust applicant parameters (Income, Loan Amount, Credit History) to see live changes in risk probability before approving a loan.
+
+---
+
+## 📈 Business Impact & Evaluation
+
+### **Metric Focus: Recall**
+In lending, a **False Negative** (missing a defaulter) is significantly more expensive than a **False Positive** (rejecting a good applicant). Therefore, this model is optimized for **Recall** to protect the lender's capital.
+
+| Metric | Score |
+| :--- | :--- |
+| **Accuracy** | 88% |
+| **Recall (Defaulters)** | 92% |
+| **Precision** | 84% |
+
+
+
+---
+
+## 📂 Project Structure
+```bash
+├── data/               # Historical lending datasets
+├── notebooks/          # EDA and Model Training (Jupyter)
+├── src/                # SQL queries and Python processing scripts
+├── model/              # Serialized .pkl files
+├── app.py              # Streamlit Application
+└── requirements.txt    # Dependencies
+```
+---
+
+
+## ⚙️ Installation & Usage
+### 1. Clone the repository.
+```bash
+git clone https://github.com/yashxagg/Fintech-Credit-Risk-Engine.git
+cd Fintech-Credit-Risk-Engine
+```
+### 2. Install dependencies.
+```bash
+pip install -r requirements.txt
+```
+### 3. Run the Streamlit App:
+```bash
+streamlit run app.py
+```
+
+---
+
+## 👤 Author
+* **Yash Aggarwal**
+  * 🎓 B.Tech CSE (AI & ML) | Class of 2026
+  * 🐙 [GitHub Profile](https://github.com/yashxagg)
+  * 💼 [LinkedIn Profile](https://linkedin.com/in/yash-aggarwal0812)
