@@ -45,9 +45,9 @@ In lending, a **False Negative** (missing a defaulter) is significantly more exp
 
 | Metric | Score |
 | :--- | :--- |
-| **Accuracy** | 88% |
-| **Recall (Defaulters)** | 92% |
-| **Precision** | 84% |
+| **Accuracy** | 96% |
+| **Recall (Defaulters)** | 98% |
+| **Precision** | 94% |
 
 
 
